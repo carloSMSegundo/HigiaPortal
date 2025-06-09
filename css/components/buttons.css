@@ -1,0 +1,69 @@
+/* ========== BUTTONS ========== */
+.button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.button--primary {
+    background-color: var(--green-medium);
+    color: var(--white);
+}
+
+.button--primary:hover {
+    background-color: var(--green-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
+}
+
+.button--primary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg, 
+        transparent 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        transparent 75%
+    );
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    100% { transform: translateX(100%); }
+}
+
+.button--outline {
+    border: 2px solid var(--green-medium);
+    color: var(--green-medium);
+}
+
+.button--outline:hover {
+    background-color: var(--green-light);
+}
+
+.button--link {
+    color: var(--green-medium);
+    padding: 0;
+}
+
+.button--link:hover {
+    text-decoration: underline;
+}
+
+.download__button {
+    transition: transform 0.3s;
+}
+
+.download__button:hover {
+    transform: translateY(-3px);
+}

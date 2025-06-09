@@ -1,0 +1,64 @@
+/* ========== STEPS ========== */
+.steps {
+    background-color: var(--white);
+}
+
+.steps__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.step__card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid var(--green-light);
+}
+
+.step__card:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: var(--shadow-card);
+}
+
+.step__number {
+    width: 50px;
+    height: 50px;
+    background-color: var(--green-light);
+    color: var(--green-medium);
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+}
+
+.step__icon {
+    font-size: 2rem;
+    color: var(--green-medium);
+    margin-bottom: 1rem;
+}
+
+.step__title {
+    font-size: 1.25rem;
+    color: var(--green-dark);
+    margin-bottom: 0.75rem;
+}
+
+.step__description {
+    color: var(--gray-medium);
+    font-size: 0.9375rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .steps__grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
